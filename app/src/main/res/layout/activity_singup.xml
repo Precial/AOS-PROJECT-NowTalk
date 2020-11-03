@@ -8,6 +8,12 @@
     android:gravity="center"
     tools:context=".SingupActivity">
 
+    <ImageView
+        android:src="@drawable/add_photo"
+        android:id="@+id/signupActivity_imageview_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="50dp"/>
 
     <EditText
         android:id="@+id/signupActivity_edditext_email"
