@@ -49,10 +49,7 @@ public class SingupActivity extends AppCompatActivity {
                 startActivityForResult(intent,PICK_FROM_ALBUM);
             }
         });
-
-
-        Log.e("검사 1번", String.valueOf(imageUri));
-
+        
         email = (EditText)findViewById(R.id.signupActivity_edditext_email);
         password = (EditText)findViewById(R.id.signupActivity_edditext_password);
         name = (EditText)findViewById(R.id.signupActivity_edditext_name);
@@ -74,14 +71,9 @@ public class SingupActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 String uid = task.getResult().getUser().getUid();
 
-                                Log.e("검사 2번", String.valueOf(imageUri));
-
-                                String CheckImageUri = String.valueOf(imageUri);
-                                if (CheckImageUri == "null") {
-
+                                if (imageUri == null) {
                                     UserModel userModel = new UserModel();
                                     userModel.userName = name.getText().toString();
-
                                     FirebaseDatabase.getInstance().getReference().child("users").child(uid).setValue(userModel);
                                 } else {
                                      FirebaseStorage.getInstance().getReference().child("userImages").child(uid).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
@@ -116,4 +108,6 @@ public class SingupActivity extends AppCompatActivity {
             imageUri = data.getData(); // 이미지 경로 원본
         }
     }
+
+
 }
