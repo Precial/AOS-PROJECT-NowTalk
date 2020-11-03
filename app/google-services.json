@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "75714483768",
+    "firebase_url": "https://nowtalk-aos-fa38b.firebaseio.com",
+    "project_id": "nowtalk-aos-fa38b",
+    "storage_bucket": "nowtalk-aos-fa38b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75714483768:android:acbdb935b3b27149bff8cd",
+        "android_client_info": {
+          "package_name": "com.sg.nowtalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75714483768-6d5ttvm2drb20o1asnut1rmv70fija02.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiwSliDJUNR7mJ3wdbb68hHo6PQXGL2AI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75714483768-6d5ttvm2drb20o1asnut1rmv70fija02.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

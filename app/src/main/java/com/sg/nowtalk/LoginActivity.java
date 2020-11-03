@@ -2,15 +2,16 @@ package com.sg.nowtalk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
 
     private Button login;
-    private Button signin;
+    private Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,14 @@ public class LoginActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         login = (Button)findViewById(R.id.logingActivity_button_login);
-        signin = (Button)findViewById(R.id.logingActivity_button_singin);
+        signup = (Button)findViewById(R.id.logingActivity_button_singup);
 
-       
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,SingupActivity.class));
+            }
+        });
+
     }
 }
